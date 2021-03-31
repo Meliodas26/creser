@@ -6,7 +6,7 @@
     }
 ?>
 <header>
-    <a href = "/creser">
+    <a href = "/">
         <img alt="logo" src="<?php echo $logo[0] ?>">
     </a>
     <?php 
