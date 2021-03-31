@@ -42,6 +42,12 @@ footer{
         }
         .center{
             order: 3;
+            h6{
+                font-size: 8px;
+                span{
+                    font-size: 12px;
+                }
+            }
         }
         .right{
             order: 1;
