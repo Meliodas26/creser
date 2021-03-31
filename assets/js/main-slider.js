@@ -12,6 +12,7 @@ function plusSlides(n) {
 
 // Thumbnail image controls
 function currentSlide(n) {
+  console.log(n);
   showSlides(slideIndex = n);
 }
 function showSlides(n) {
@@ -27,6 +28,5 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "flex";
-  console.log(dots);
   dots[slideIndex-1].className += " active";
 } 
