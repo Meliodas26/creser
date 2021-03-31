@@ -66,8 +66,10 @@
     .slider{
         div{
             width: 100%;
+            height: auto;
             img{
                 max-width: 100%;
+                height: auto;
             }
         }
         .prev, .next{
@@ -88,11 +90,3 @@
         }
     }
 }
-@media screen and (max-width: 400px){
-    .slider{
-        div{
-            height: 150px;
-        }
-    }
-}
-

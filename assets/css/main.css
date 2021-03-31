@@ -159,9 +159,11 @@ footer .center {
 @media screen and (max-width: 800px) {
   .slider div {
     width: 100%;
+    height: auto;
   }
   .slider div img {
     max-width: 100%;
+    height: auto;
   }
   .slider .prev, .slider .next {
     position: absolute;
@@ -178,11 +180,6 @@ footer .center {
   }
   .slider .next {
     right: 0;
-  }
-}
-@media screen and (max-width: 400px) {
-  .slider div {
-    height: 150px;
   }
 }
 ul {
