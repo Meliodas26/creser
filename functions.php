@@ -17,10 +17,12 @@ function my_remove_admin_menus() {
 }
 //Iniciar template con los menus
 function init_template(){
+	add_theme_support( 'post-thumbnails' );
 	register_nav_menus(
 			array(
-				'main' => 'Menú Principal',
-                'social-network' => 'Redes Sociales'
+				'main' => 'Main',
+                'social-network' => 'Social networks',
+				'contact' => 'Contact',
 			)
 	);
 }
@@ -35,6 +37,36 @@ function add_assets(){
 	);
 	//iconos wordpress
 	wp_enqueue_style( 'dashicons' );
+	//Scripts
+	wp_enqueue_script('otro', get_template_directory_uri().'/assets/js/main-slider.js', true, true);
 }
 add_action('wp_enqueue_scripts', 'add_assets');
+
+//Contenido destacado
+function featured_content(){
+	$labels = array(
+		'name' => 'Featured content',
+		'singular_name' => 'featured-content',
+		'manu_name' => 'Featured content',
+	);
+	$args = array(
+			'label'  => 'featured-content', 
+			'description' => 'Featured content in the main slider',
+			'labels'       => $labels,
+			'supports'   => array('title','thumbnail'),
+			'public'    => true,
+			'show_in_menu' => true,
+			'menu_position' => 1,
+			'menu_icon'     => 'dashicons-format-image',
+			'can_export' => true,
+			'publicly_queryable' => true,
+			'rewrite'       => true,
+			'show_in_rest' => true
+	);  
+	//Nombre de post types en singular es recomendado  
+	register_post_type('featured-content', $args);
+}
+
+add_action('init', 'featured_content');
+
 ?>

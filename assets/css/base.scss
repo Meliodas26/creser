@@ -1,7 +1,22 @@
 .margin-top-default{margin-top: 0!important;}
-*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0; box-sizing:border-box}
 body{
     overflow-x: hidden;
-    box-sizing: border-box;
-    background-color: red;
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
 }

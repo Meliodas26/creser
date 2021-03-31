@@ -1,1 +1,12 @@
 @import 'base.scss';
+
+//Segments
+@import 'segments/sections.scss';
+@import 'segments/footer.scss';
+
+//Content
+@import 'content/slider.scss';
+@import 'content/nav.scss';
+
+//Elements
+@import 'elements/text.scss';

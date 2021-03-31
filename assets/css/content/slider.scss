@@ -1,0 +1,57 @@
+/* Slideshow container */
+.slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hide the images by default */
+    .slide {
+        display: none;
+        width: 800px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+    }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    margin: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #393939;
+    font-size: 50px;
+    transition: 0.6s ease;
+    user-select: none;
+    &:hover{
+        color: #12A4D7;
+    }
+}
+
+/* The dots/bullets/indicators */
+.dots{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #393939;
+        border-radius: 50%;
+        transition: background-color 0.6s ease;
+    }
+    .dot:hover,.active {
+        background: #12A4D7;
+    }
+}
+

@@ -1,0 +1,72 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        a{
+            text-decoration: none;
+            &:hover{
+                color: #12A4D7!important;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.menu-contact-container{
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+            margin: 5px 0;
+            a{
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.menu-social-networks-container{
+    width: 100%;
+    .menu{
+        display: flex;
+        justify-content: flex-end;
+        li{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #FFF;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #393939;
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            &:hover{
+                a{
+                    color: #FFF!important;
+                }
+			}
+        }
+        .whatsapp:hover{
+            background-color: #06D755!important;
+        }
+        .facebook:hover{
+            background-color: #0574E7!important;
+        }
+        .instagram:hover{
+            background-color: #E2609C!important;
+        }
+    }
+}
