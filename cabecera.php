@@ -6,7 +6,7 @@
     }
 ?>
 <header>
-    <a href = "http://localhost/rheasy-develop">
+    <a href = "/creser">
         <img alt="logo" src="<?php echo $logo[0] ?>">
     </a>
     <?php 

@@ -56,7 +56,7 @@ function featured_content(){
 			'supports'   => array('title','thumbnail'),
 			'public'    => true,
 			'show_in_menu' => true,
-			'menu_position' => 1,
+			'menu_position' => 2,
 			'menu_icon'     => 'dashicons-format-image',
 			'can_export' => true,
 			'publicly_queryable' => true,

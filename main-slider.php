@@ -13,6 +13,7 @@
     <div class="slider">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <?php 
+            $count_Slide = 0;
             if($featured_content->have_posts()){
                 while($featured_content->have_posts()){
                     $featured_content->the_post();
@@ -20,6 +21,7 @@
                     <!-- Full-width images with number and caption text -->
                         <img class="slide fade" src="<?php the_post_thumbnail_url();?>" alt="Slide">
                     <?php
+                    $count_Slide++;
                 }
             }
         ?>
@@ -27,9 +29,12 @@
     </div>
     <!-- The dots/circles -->
     <div class = "dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <?php 
+            for($i=1; $i<=$count_Slide; $i++){
+                ?><span class="dot" onclick="currentSlide('<?php echo $i?>')"></span>
+                <?php
+            }
+        ?>
     </div> 
 </section>
 <script>
