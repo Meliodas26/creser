@@ -38,7 +38,7 @@ body .fade {
 .main-section {
   display: flex;
   flex-direction: column;
-  margin: 25px;
+  margin: 25px 0;
 }
 
 footer {
@@ -59,6 +59,42 @@ footer .center {
   color: #FFF;
 }
 
+@media screen and (max-width: 1200px) {
+  footer {
+    flex-direction: column;
+  }
+  footer .left, footer .center, footer .right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  footer .left {
+    order: 2;
+  }
+  footer .left .menu {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  footer .left .menu .email {
+    order: 2;
+  }
+  footer .left .menu .phone {
+    order: 1;
+  }
+  footer .center {
+    order: 3;
+  }
+  footer .right {
+    order: 1;
+  }
+  footer .right .menu-social-networks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /* Slideshow container */
 .slider {
   height: 100%;
@@ -68,17 +104,12 @@ footer .center {
   align-items: center;
   /* Hide the images by default */
 }
-.slider .slide {
+.slider div {
   display: none;
   width: 800px;
   height: 300px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
 }
 
 /* Next & previous buttons */
@@ -116,6 +147,44 @@ footer .center {
   background: #12A4D7;
 }
 
+@media screen and (max-width: 1200px) {
+  .slider div {
+    width: auto;
+  }
+  .slider div img {
+    width: 600px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slider div {
+    width: 100%;
+  }
+  .slider div img {
+    max-width: 100%;
+  }
+  .slider .prev, .slider .next {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+    background-color: #393939;
+    color: #FFF;
+  }
+  .slider .prev {
+    left: 0;
+  }
+  .slider .next {
+    right: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .slider div {
+    height: 150px;
+  }
+}
 ul {
   list-style: none;
   margin: 0;

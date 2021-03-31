@@ -15,3 +15,41 @@ footer{
         color: #FFF;
     }
 }
+
+@media screen and (max-width: 1200px){
+    footer{
+        flex-direction: column;
+        .left, .center, .right{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .left{
+            order: 2;
+            .menu   {
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+                .email{
+                    order: 2;
+                }
+                .phone{
+                    order: 1;
+                }
+            }
+        }
+        .center{
+            order: 3;
+        }
+        .right{
+            order: 1;
+            .menu-social-networks-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

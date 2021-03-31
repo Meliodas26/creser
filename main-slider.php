@@ -19,7 +19,7 @@
                     $featured_content->the_post();
                     ?>
                     <!-- Full-width images with number and caption text -->
-                        <img class="slide fade" src="<?php the_post_thumbnail_url();?>" alt="Slide">
+                    <div class="slide"> <img class="fade" src="<?php the_post_thumbnail_url();?>" alt="Slide"> </div>    
                     <?php
                     $count_Slide++;
                 }
@@ -38,5 +38,5 @@
     </div> 
 </section>
 <script>
-    startSlider(1);
+    startSlider(1,'<?php echo $count_Slide?>');
 </script>

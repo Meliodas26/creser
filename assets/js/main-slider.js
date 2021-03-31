@@ -1,13 +1,18 @@
 var slideIndex;
+var nSliders;
 
-function startSlider(tmp){
+function startSlider(tmp, nSliders){
   slideIndex = tmp;
+  nSliders = nSliders;
   showSlides(slideIndex)
 }
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  if(slideIndex != 0)
+    showSlides(slideIndex += n);
+  else
+    showSlides(slideIndex = nSliders);
 }
 
 // Thumbnail image controls

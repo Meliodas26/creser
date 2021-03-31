@@ -6,17 +6,12 @@
     justify-content: center;
     align-items: center;
     /* Hide the images by default */
-    .slide {
+    div{
         display: none;
         width: 800px;
         height: 300px;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: center;
     }
 }
 
@@ -52,6 +47,52 @@
     }
     .dot:hover,.active {
         background: #12A4D7;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .slider{
+        div{
+            width: auto;
+            img{
+                width: 600px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .slider{
+        div{
+            width: 100%;
+            img{
+                max-width: 100%;
+            }
+        }
+        .prev, .next{
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            width: 25px;
+            height: 25px;
+            font-size: 10px;
+            background-color: #393939;
+            color: #FFF;
+        }
+        .prev{
+            left: 0;
+        }
+        .next{
+            right: 0;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .slider{
+        div{
+            height: 150px;
+        }
     }
 }
 
