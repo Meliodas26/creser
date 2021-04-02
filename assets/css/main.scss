@@ -5,8 +5,9 @@
 @import 'segments/footer.scss';
 
 //Content
-@import 'content/slider.scss';
-@import 'content/nav.scss';
+@import 'components/cabecera';
+@import 'components/slider.scss';
+@import 'components/nav.scss';
 
 //Elements
 @import 'elements/text.scss';
